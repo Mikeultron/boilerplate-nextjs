@@ -1,0 +1,15 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+  "plugins": ["react"],
+  "rules": {
+    "quotes": ["error", "double"],
+    "no-console": "warn",
+    "no-unused-vars": "error",
+    "no-empty": "error",
+    "no-empty-function": "error",
+    
+    // React specific eslint configs
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
+  }
+}
