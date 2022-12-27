@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
 
 const AboutView = dynamic(() => import("@views/about"), {
-  ssr: false,
+	ssr: false,
 });
 
 const AboutPage = () => {
-  return <AboutView />;
+	return <AboutView />;
 };
 
 export default AboutPage;

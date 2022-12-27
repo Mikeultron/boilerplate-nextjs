@@ -1,9 +1,11 @@
 import dynamic from "next/dynamic";
 
 const HomeView = dynamic(() => import("@features/home/view"), {
-  ssr: false,
+	ssr: false,
 });
 
-export default function Home() {
-  return <HomeView />;
-}
+const Home = () => {
+	return <HomeView />;
+};
+
+export default Home;
