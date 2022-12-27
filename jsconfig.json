@@ -11,6 +11,7 @@
             "@hooks/*":["./src/hooks/*"],
             "@utils/*":["./src/utils/*"],
             "@services/*":["./src/services/*"],
+            "@api/*":["./src/api/*"],
         }
     }
 }
