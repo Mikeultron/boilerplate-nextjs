@@ -8,10 +8,9 @@ const usePosts = () => {
 			const response = await getPosts();
 			setPosts(response.data);
 		} catch (err) {
-			return;
+			// Notify when there's error
 		}
 	};
-
 	useEffect(() => {
 		fetchPosts();
 	}, []);

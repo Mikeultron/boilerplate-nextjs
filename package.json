@@ -1,7 +1,14 @@
 {
-  "name": "next-13",
+  "name": "boilerplate-nextjs",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/b1380/boilerplate-nextjs"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/b1380/boilerplate-nextjs/-/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

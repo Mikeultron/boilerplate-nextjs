@@ -6,6 +6,35 @@ const api = axios.create({
 	validateStatus: (status) => status >= 200 && status < 300,
 });
 
-// TODO: Add interceptors when token is expired, logic for adding token to headers.
+// TODO: Add interceptors when token is expired.
+// api.interceptors.response.use(
+// 	(response) => {
+// 		if (response.status === 401) {
+// 			// Handle unauthorized response
+// 			// Remove token and force user to login
+// 		}
+// 		return response;
+// 	},
+// 	(error) => {
+// 		return error;
+// 	},
+// );
 
-export default api;
+const apiRequest = async (config, withToken = false) => {
+	try {
+		// * Current implementation only handles client side request with authorization
+		// * Need to access server cookies if we want to fetch data using SSR with authorization
+		const token = "jwt.afd123743812";
+		if (withToken) {
+			config.headers = {
+				Authorization: `Bearer ${token}`,
+			};
+		}
+		const response = await api.request(config);
+		return response;
+	} catch (err) {
+		throw new Error(err.message);
+	}
+};
+
+export default apiRequest;
